@@ -1,0 +1,26 @@
+<div>
+    <p>Thanks for visiting! Set up an appointment today!</p>
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <!-- Day Column -->
+        <ng-container matColumnDef="Day">
+            <th mat-header-cell *matHeaderCellDef> Day </th>
+            <td mat-cell *matCellDef="let day"> {{day.dayOfWeek}} </td>
+        </ng-container>
+
+        <!-- Hours Column -->
+        <ng-container matColumnDef="Hours">
+            <th mat-header-cell *matHeaderCellDef> Hours </th>
+            <td mat-cell *matCellDef="let day">
+                <span>
+                    {{day.isOpen === true ? day.startTime + ' - ' + day.endTime : 'Closed'}}
+                </span>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+</div>

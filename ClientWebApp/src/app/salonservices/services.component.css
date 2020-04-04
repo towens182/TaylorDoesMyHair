@@ -1,0 +1,22 @@
+.hair-image {
+    background-image: url('../../assets/images/favicon.ico');
+    background-size: cover;
+}
+
+.offerings-card {
+    width: 200px;
+    margin: 10px;
+}
+
+.offerings-section {
+    display: flex;
+}
+
+.mat-card {
+    padding: 10px;
+}
+
+h3 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}

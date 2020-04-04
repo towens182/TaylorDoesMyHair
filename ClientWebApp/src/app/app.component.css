@@ -1,0 +1,11 @@
+.footer {
+    padding-top: 10px;
+    bottom: 0;
+    position: fixed;
+    width: 99%;
+  }
+
+  .main-content {
+    padding : 15px;
+    overflow: auto;
+  }

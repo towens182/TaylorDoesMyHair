@@ -1,0 +1,25 @@
+/* Application-wide Styles */
+h1 {
+    color: #369;
+    font-family: cursive;
+    font-size: 150%;
+}
+
+h2, h3 {
+  color: #444;
+  font-family: cursive;
+  font-weight: lighter;
+}
+
+body, input[type="text"], button {
+  color: #333;
+  font-family: cursive;
+}
+
+html {
+  background-color: white;
+}
+/* everywhere else */
+* {
+  font-family: cursive;
+}
