@@ -18,6 +18,8 @@ body, input[type="text"], button {
 
 html {
   background-color: white;
+  max-width: 960px;
+  margin: auto;
 }
 /* everywhere else */
 * {

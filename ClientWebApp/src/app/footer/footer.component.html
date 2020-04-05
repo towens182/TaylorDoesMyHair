@@ -1,11 +1,26 @@
-<div class="footer">
-    <a href={contactInformation?.instagramUrl}>
-        <img src="../../assets/images/instagram-logo.png" alt="Instagram" width="20" height="20">
-    </a>
-    Follow me!
-    <br>
-    <a href="tel:">{{contactInformation?.cellPhone}}</a> Cell | <a
-        href="tel:">{{contactInformation?.workPhone}}</a> Salon
-    <br>
-    {{contactInformation?.address}}
+<div>
+    <hr>
+    <div class="grid-container">
+        <div id="social">
+            <div>
+                Follow me!
+            </div>
+            <div class="social-img">
+                <a target="_blank" rel="noopener noreferrer"
+                    href="https://www.instagram.com/{{contactInformation?.instagram}}">
+                    <img src="../../assets/images/instagram-logo.png" alt="Instagram" width="20" height="20">
+                </a>
+            </div>
+        </div>
+        <div>
+            <div id="contact">
+                Contact Us
+            </div>
+        </div>
+        <div id="page-info">
+            Taylor Does My Hair
+            <br>
+            2020
+        </div>
+    </div><!-- Grid Container end-->
 </div>
