@@ -1,26 +1,38 @@
-<div>
-    <p>Thanks for visiting! Set up an appointment today!</p>
+<div class="container">
+    <div class="side">
+        <!-- About Me-->
+        <h2>About Me</h2>
+        <div>
+            <img src="../../assets/images/taylor.jpg" alt="Image of Taylor">
+            <h4>Taylor</h4>
+            <ul style="list-style-type: square;">
+                <li>Independent Stylist</li>
+                <li>Licensed Cosmetologist</li>
+            </ul>
+        </div>
 
-    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <!-- Hours-->
+        <h2>Hours</h2>
 
-        <!-- Day Column -->
-        <ng-container matColumnDef="Day">
-            <th mat-header-cell *matHeaderCellDef> Day </th>
-            <td mat-cell *matCellDef="let day"> {{day.dayOfWeek}} </td>
-        </ng-container>
+        <div id="business-hours">
+            <table class="hours-table">
+                <ng-container *ngFor="let day of about?.hours">
+                    <tr>
+                        <td>{{day.dayOfWeek}}</td>
+                        <td>{{day.isOpen === true ? day.startTime + ' - ' + day.endTime : 'Closed'}}</td>
+                    </tr>
+                </ng-container>
+            </table>
+        </div>
+    </div>
 
-        <!-- Hours Column -->
-        <ng-container matColumnDef="Hours">
-            <th mat-header-cell *matHeaderCellDef> Hours </th>
-            <td mat-cell *matCellDef="let day">
-                <span>
-                    {{day.isOpen === true ? day.startTime + ' - ' + day.endTime : 'Closed'}}
-                </span>
-            </td>
-        </ng-container>
-
-        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-    </table>
-
+    <div class="main">
+        <h2>{{ contactInformation?.businessName }}</h2>
+        <h4>{{ contactInformation?.businessAddress }}</h4>
+        <div>
+            <img src="../../assets/images/salon-building.jpg" alt="Image of salon">
+        </div>
+        <!--  <h2>Location</h2> -->
+        <!--Map-->
+    </div>
 </div>

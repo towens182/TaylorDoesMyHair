@@ -1,9 +1,54 @@
-table {
-    margin: 0 auto;
-    width: 66%;
+.container {  
+    display: flex;
 }
 
-.table {
-    margin: 0 auto;
-    height: auto;
+.side {
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+.main {   
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+}
+
+.hours-table tr td:first-child {
+    font-weight: bold;
+}
+
+.hours-table tr td:last-child {
+    text-align: center;
+}
+
+#business-hours {
+    border: 10px solid transparent;
+    border-image: url(src\assets\images\border.png) 30 stretch;
+    font-size: 13px;
+    padding: 15px;
+    width: auto;
+}
+
+h2, h3, h4 {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+img {
+    background-color: #aaa;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 800px) {
+    .container {   
+      flex-direction: column;
+    }
 }

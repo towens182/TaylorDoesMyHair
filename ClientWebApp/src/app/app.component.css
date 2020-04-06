@@ -1,9 +1,8 @@
-#footer {
-    padding-top: 10px;
+.header {
+  padding: 20px;
+  background-color: #e6a9ff;
+}
+
+.footer {
     bottom: 0;
   }
-
-#main-content {
-  padding : 15px;
-  overflow: auto;
-}

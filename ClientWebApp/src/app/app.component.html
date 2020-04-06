@@ -1,16 +1,21 @@
-<h1>{{title}}</h1>
+<!--Header-->
+<div class="header">
+    <h1>{{title}}</h1>
+</div>
 
 <!--Navigation bar-->
-<div class="nav-content">
+<div>
     <app-navigation></app-navigation>
 </div>
 
 <!--The main content of the page-->
-<div id="main-content">
+<div>
     <router-outlet></router-outlet>
 </div>
-
+<div style="padding-top: 10px; padding-bottom: 10px;">
+    <hr>
+</div>
 <!--The business/contact information-->
-<div id="footer">
+<div class="footer">
     <app-footer></app-footer>
 </div>

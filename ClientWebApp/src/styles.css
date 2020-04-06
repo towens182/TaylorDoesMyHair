@@ -1,6 +1,6 @@
 /* Application-wide Styles */
 h1 {
-    color: #369;
+    color: #444;
     font-family: cursive;
     font-size: 150%;
 }
@@ -11,6 +11,10 @@ h2, h3 {
   font-weight: lighter;
 }
 
+body {
+  margin: 0px;
+}
+
 body, input[type="text"], button {
   color: #333;
   font-family: cursive;
@@ -18,7 +22,7 @@ body, input[type="text"], button {
 
 html {
   background-color: white;
-  max-width: 960px;
+  max-width: 1000px;
   margin: auto;
 }
 /* everywhere else */

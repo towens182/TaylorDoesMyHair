@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { About } from '../../models/about';
 import { AboutService } from '../about.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-about',
@@ -9,13 +10,16 @@ import { AboutService } from '../about.service';
 })
 export class AboutComponent implements OnInit {
 
-  about: About;
-  dataSource: any;
-  displayedColumns: string[] = ['Day', 'Hours'];
+  private contactInfoUri = "../assets/contact-info.json";
 
-  constructor(private aboutService: AboutService) { }
+  about: About;
+  contactInformation: any;
+  dataSource: any;
+
+  constructor(private httpService: HttpClient, private aboutService: AboutService) { }
 
   ngOnInit() {
+    this.getContact();
     this.getAbout();
   }
 
@@ -24,6 +28,13 @@ export class AboutComponent implements OnInit {
       .subscribe(about => {
         this.about = about;
         this.dataSource = this.about.hours;
+      });
+  }
+
+  getContact(): void {
+    this.httpService.get(this.contactInfoUri)
+      .subscribe((data: any) => {
+        this.contactInformation = data;
       });
   }
 }
