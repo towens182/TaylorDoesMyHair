@@ -1,6 +1,6 @@
 import { Day } from './day';
 
-export class About {
+export interface About {
   message: string;
   hours: Day[];
 }

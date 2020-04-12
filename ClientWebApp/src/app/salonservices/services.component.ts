@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SalonservicesService } from '../salonservices.service';
+import { SalonservicesService } from './salonservices.service';
 import { SalonOffering } from 'src/models/salonOffering';
 
 @Component({
@@ -17,10 +17,10 @@ export class ServicesComponent implements OnInit {
     this.getSalonServices();
   }
 
-  getSalonServices() {
+  getSalonServices(): void {
     this.salonService.getServices()
-    .subscribe(salonOffering => {
-      this.salonOffering = salonOffering;
+    .subscribe(response => {
+      this.salonOffering = { ... response.body };
     })
   }
 

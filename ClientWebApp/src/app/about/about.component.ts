@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { About } from '../../models/about';
-import { AboutService } from '../about.service';
 import { HttpClient } from '@angular/common/http';
+import { AboutService } from './about.service';
 
 @Component({
   selector: 'app-about',
@@ -25,12 +25,13 @@ export class AboutComponent implements OnInit {
 
   getAbout(): void {
     this.aboutService.getAbout()
-      .subscribe(about => {
-        this.about = about;
+      .subscribe(response => {
+        this.about = { ... response.body };
         this.dataSource = this.about.hours;
       });
   }
 
+  // Update me
   getContact(): void {
     this.httpService.get(this.contactInfoUri)
       .subscribe((data: any) => {

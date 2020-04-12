@@ -1,9 +1,9 @@
 <div class="container">
     <div class="side">
         <!-- About Me-->
-        <h2>About Me</h2>
-        <div>
-            <img src="../../assets/images/taylor.jpg" alt="Image of Taylor">
+        <div id="bio">
+            <h2>About Me</h2>
+            <img src="../../assets/images/taylor.jpg" alt="Image of Taylor" style="max-width: 300px;">
             <h4>Taylor</h4>
             <ul style="list-style-type: square;">
                 <li>Independent Stylist</li>
@@ -12,9 +12,9 @@
         </div>
 
         <!-- Hours-->
-        <h2>Hours</h2>
-
         <div id="business-hours">
+            <h2>Hours</h2>
+            <!-- TODO Display appropriate error if failure to recieve hours -->
             <table class="hours-table">
                 <ng-container *ngFor="let day of about?.hours">
                     <tr>

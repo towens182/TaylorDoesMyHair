@@ -1,6 +1,6 @@
 import { SalonService } from './SalonService';
 
-export class SalonOffering {
+export interface SalonOffering {
     hairServices: SalonService[];
     nailServices: SalonService[];
     colorServices: SalonService[];

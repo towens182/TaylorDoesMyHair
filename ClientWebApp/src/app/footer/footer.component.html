@@ -1,4 +1,7 @@
 <div class="footer">
+    <div style="padding-top: 10px; padding-bottom: 10px;">
+        <hr>
+    </div>
     <div class="grid-container">
         <div class="social">
             <div>
@@ -12,10 +15,10 @@
             </div>
         </div>
         <div>
-            <div class="contact">
-                Contact Us
+            <div id="contact">
+                <a (click)="activeLink = link" routerLink="feedback">Contact Us</a>
             </div>
-            <div class="page-info">
+            <div id="page-info">
                 &copy; 2020 Taylor Does My Hair
             </div>
         </div>
