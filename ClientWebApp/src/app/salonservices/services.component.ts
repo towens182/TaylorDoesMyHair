@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiGatewayService } from '../ApiGateway.service';
+import { ApiGatewayService } from '../apiGateway.service';
 
 @Component({
   selector: 'app-services',

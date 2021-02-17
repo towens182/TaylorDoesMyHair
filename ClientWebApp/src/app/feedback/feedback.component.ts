@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { ApiGatewayService } from '../ApiGateway.service';
+import { ApiGatewayService } from '../apiGateway.service';
 
 @Component({
   selector: 'app-feedback',
