@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SalonservicesService } from './salonservices.service';
-import { SalonOffering } from 'src/models/salonOffering';
+import { ApiGatewayService } from '../ApiGateway.service';
 
 @Component({
   selector: 'app-services',
@@ -9,18 +8,19 @@ import { SalonOffering } from 'src/models/salonOffering';
 })
 export class ServicesComponent implements OnInit {
 
-  salonOffering: SalonOffering;
+  salonServices: any;
 
-  constructor(private salonService: SalonservicesService) { }
+  constructor(private apiGatewayService: ApiGatewayService) { }
 
   ngOnInit() {
     this.getSalonServices();
   }
 
   getSalonServices(): void {
-    this.salonService.getServices()
+    this.apiGatewayService.getServices()
     .subscribe(response => {
-      this.salonOffering = { ... response.body };
+      console.log("Result" + JSON.stringify(response));
+      this.salonServices = { ... response };
     })
   }
 

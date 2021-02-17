@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { About } from '../../models/about';
 import { HttpClient } from '@angular/common/http';
-import { AboutService } from './about.service';
+import { ApiGatewayService } from '../ApiGateway.service';
 
 @Component({
   selector: 'app-about',
@@ -12,22 +11,22 @@ export class AboutComponent implements OnInit {
 
   private contactInfoUri = "../assets/contact-info.json";
 
-  about: About;
+  hours: any;
   contactInformation: any;
   dataSource: any;
 
-  constructor(private httpService: HttpClient, private aboutService: AboutService) { }
+  constructor(private httpService: HttpClient, private apiGatewayService: ApiGatewayService) { }
 
   ngOnInit() {
     this.getContact();
-    this.getAbout();
+    this.getHours();
   }
 
-  getAbout(): void {
-    this.aboutService.getAbout()
+  getHours(): void {
+    this.apiGatewayService.getHours()
       .subscribe(response => {
-        this.about = { ... response.body };
-        this.dataSource = this.about.hours;
+        this.hours = { ...response };
+        this.dataSource = this.hours.hours;
       });
   }
 

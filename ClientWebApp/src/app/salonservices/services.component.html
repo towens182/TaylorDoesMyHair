@@ -1,46 +1,16 @@
 <!--TODO change font and format-->
 <div class="component-container">
-    <h3>Hair Services</h3>
+    <h3>Taylor's Services</h3>
     <div class="offerings-section">
-        <mat-card *ngFor="let hair of salonOffering?.hairServices" class="offerings-card">
+        <mat-card *ngFor="let service of salonServices?.services" class="offerings-card">
             <mat-card-header>
                 <div mat-card-avatar class="hair-image"></div>
-                <mat-card-title>{{ hair?.serviceName }}</mat-card-title>
-                <mat-card-subtitle>${{ hair?.cost}}</mat-card-subtitle>
+                <mat-card-title>{{ service.name }}</mat-card-title>
+                <mat-card-subtitle>${{ service.cost}}</mat-card-subtitle>
             </mat-card-header>
             <!-- <img mat-card-image src="" alt="Photo of ..."> -->
             <mat-card-content>
-                <p>{{ hair?.description }}</p>
-            </mat-card-content>
-        </mat-card>
-    </div>
-
-    <h3>Color Services</h3>
-    <div class="offerings-section">
-        <mat-card *ngFor="let color of salonOffering?.colorServices" class="offerings-card">
-            <mat-card-header>
-                <div mat-card-avatar class="hair-image"></div>
-                <mat-card-title>{{ color?.serviceName }}</mat-card-title>
-                <mat-card-subtitle>${{ color?.cost}}</mat-card-subtitle>
-            </mat-card-header>
-            <!--  <img mat-card-image src="" alt="Photo of ..."> -->
-            <mat-card-content>
-                <p>{{ color?.description }}</p>
-            </mat-card-content>
-        </mat-card>
-    </div>
-
-    <h3>Nail Services</h3>
-    <div class="offerings-section">
-        <mat-card *ngFor="let nail of salonOffering?.nailServices" class="offerings-card">
-            <mat-card-header>
-                <div mat-card-avatar class="hair-image"></div>
-                <mat-card-title>{{ nail?.serviceName }}</mat-card-title>
-                <mat-card-subtitle>${{ nail?.cost}}</mat-card-subtitle>
-            </mat-card-header>
-            <!-- <img mat-card-image src="" alt="Photo of ..."> -->
-            <mat-card-content>
-                <p>{{ nail?.description }}</p>
+                <p>{{ service.description }}</p>
             </mat-card-content>
         </mat-card>
     </div>

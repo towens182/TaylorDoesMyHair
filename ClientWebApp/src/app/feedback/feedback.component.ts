@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { ApiGatewayService } from '../ApiGateway.service';
 
 @Component({
   selector: 'app-feedback',
@@ -15,10 +16,11 @@ export class FeedbackComponent {
     feedbackFormControl: ['', Validators.required]
   });
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private apiGatewayService: ApiGatewayService, private fb: FormBuilder) { }
   
   onSubmit() {
-    //TODO post to backend
-    console.warn(this.feedbackForm.value);
+    this.apiGatewayService.submitFeedback(JSON.stringify(this.feedbackForm.value));
+    console.warn(JSON.stringify(this.feedbackForm.value));
+    // TODO lets let the user know if it posted successfully
   }
 }

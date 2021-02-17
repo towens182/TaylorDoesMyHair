@@ -3,7 +3,7 @@
         <!-- About Me-->
         <div id="bio">
             <h2>About Me</h2>
-            <img src="../../assets/images/taylor.jpg" alt="Image of Taylor" style="max-width: 300px;">
+            <img src="https://taylordoesmyhair.s3.amazonaws.com/images/taylor.jpg" alt="Image of Taylor" style="max-width: 300px;">
             <h4>Taylor</h4>
             <ul style="list-style-type: square;">
                 <li>Independent Stylist</li>
@@ -16,10 +16,10 @@
             <h2>Hours</h2>
             <!-- TODO Display appropriate error if failure to recieve hours -->
             <table class="hours-table">
-                <ng-container *ngFor="let day of about?.hours">
+                <ng-container *ngFor="let day of hours?.hours">
                     <tr>
                         <td>{{day.dayOfWeek}}</td>
-                        <td>{{day.isOpen === true ? day.startTime + ' - ' + day.endTime : 'Closed'}}</td>
+                        <td>{{day.isOpen === 'true' ? day.startTime + ' - ' + day.endTime : 'Closed'}}</td>
                     </tr>
                 </ng-container>
             </table>
@@ -30,9 +30,9 @@
         <h2>{{ contactInformation?.businessName }}</h2>
         <h4>{{ contactInformation?.businessAddress }}</h4>
         <div>
-            <img src="../../assets/images/salon-building.jpg" alt="Image of salon">
+            <img src="https://taylordoesmyhair.s3.amazonaws.com/images/AlchemyStoreFront.jpg" alt="Image of salon">
         </div>
-        <!--  <h2>Location</h2> -->
+        <h2>Location</h2>
         <!--Map-->
     </div>
 </div>
